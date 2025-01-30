@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ECEEFF;
+
+  --color-coral-red: #FF6452;
+  --color-pale-blue: #F5F6FF;
+
+  --color-slate-gray: #6D6D6D;
+
+  --color-white-400: rgba(255, 255, 255, 0.80);
+
+  --font-palanquin: Palanquin, sans-serif;
+
+  --font-montserrat: Montserrat, sans-serif;
+
+  --boxShadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  --screens-wide: 1440px;
+  --bg-card: url(assets/images/thumbnail-background.svg)
+
+  --background-hero: url('assets/images/collection-background.svg');
+  
+}
+
+
+  
+@layer components {
+  .max-container {
+    @apply max-w-[1440px] mx-auto
+  }
+
+  .input {
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-hidden sm:border-hidden border max-sm:border-slate-gray max-sm:rounded-full;
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  .hero{
+    @apply bg-[url(assets/images/collection-background.svg)]
+  }
+  .padding {
+    @apply px-8 sm:px-16 sm:py-24 py-12;
+
+  }
+
+  .padding-x {
+    @apply  px-8 sm:px-16;
+  }
+
+  .padding-y {
+    @apply py-12 sm:py-24;
+  }
+
+  .padding-l {
+    @apply pl-8 sm:pl-16;
+  }
+
+  .padding-r {
+    @apply pr-8 sm:pr-16;
+  }
+
+  .padding-t {
+    @apply pt-12 sm:pt-24;
+  }
+
+  .padding-b {
+    @apply pb-12 sm:pb-24 ;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+
+  
+  }
+
+}
+
+
+
+@layer utilities{
+  
+}
+  
