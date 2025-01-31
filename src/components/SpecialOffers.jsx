@@ -1,11 +1,27 @@
-import { arrowRight } from "../assets/icons";
 import { offer } from "../assets/images";
 import Button from "./Button";
+
+import { motion } from "framer-motion";
 
 function SpecialOffers() {
   return (
     <section className="flex flex-wrap justify-start items-center max-xl:flex-col-reverse gap-10 max-container">
-      <div className="flex-1">
+      <motion.div
+        initial={{
+          opacity: 1,
+          x: -100,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.3, ease: "easeOut" },
+          delay: 0.1,
+        }}
+        viewport={{
+          once: false,
+        }}
+        className="flex-1"
+      >
         <img
           src={offer}
           alt=""
@@ -13,8 +29,23 @@ function SpecialOffers() {
           height={687}
           className="object-contain"
         />
-      </div>
-      <div className="flex flex-1 flex-col">
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 1,
+          x: 100,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.3, ease: "easeIn" },
+          delay: 0.1,
+        }}
+        viewport={{
+          once: false,
+        }}
+        className="flex flex-1 flex-col"
+      >
         <h2 className="font-palanquin text-4xl lg:max-w-lg capitalize font-bold">
           <span className="text-coral-red"> Special </span>
           Offer
@@ -30,7 +61,7 @@ function SpecialOffers() {
           nothing short of exceptional
         </p>
         <div className="mt-11 flex flex-wrap gap-4">
-          <Button label="Shop now" iconURL={arrowRight} />
+          <Button label="Shop now" />
           <Button
             label="Learn More"
             backgroundColor="bg-white"
@@ -38,7 +69,7 @@ function SpecialOffers() {
             textColor="text-slate-gray"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

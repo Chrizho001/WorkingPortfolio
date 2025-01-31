@@ -7,16 +7,21 @@ import SpecialOffers from "./components/SpecialOffers";
 import CustomerReviews from "./components/CustomerReviews";
 import Subscribe from "./components/Subscribe";
 import Footer from "./components/Footer";
+import Match from "./components/Match";
 
 function App() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <Nav />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
       </section>
       <section className="sm:px-16 px-8 sm:py-24 py-12">
         <PopularProducts />
+      </section>
+
+      <section className="sm:px-16 px-8 sm:py-24 py-8">
+        <Match />
       </section>
 
       <section className="sm:px-16 px-8 sm:py-24 py-12">
@@ -39,7 +44,9 @@ function App() {
         <Subscribe />
       </section>
 
-      <section className="bg-black padding-x padding-t pb-8"><Footer /></section>
+      <section className="bg-black padding-x padding-t pb-8">
+        <Footer />
+      </section>
     </main>
   );
 }
